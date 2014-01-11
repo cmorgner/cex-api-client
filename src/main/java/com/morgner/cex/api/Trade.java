@@ -6,7 +6,7 @@ import com.google.gson.annotations.Expose;
  *
  * @author Christian Morgner
  */
-public class Trade {
+public class Trade implements Comparable<Trade> {
 
 	@Expose
 	private long tid = 0L;
@@ -34,5 +34,12 @@ public class Trade {
 
 	public long getTimestamp() {
 		return timestamp;
+	}
+
+	// ----- interface Comparable -----
+	public int compareTo(Trade o) {
+		
+		// default sort order is "price, descending"
+		return Double.valueOf(o.getPrice()).compareTo(Double.valueOf(getPrice()));
 	}
 }

@@ -108,9 +108,6 @@ public class CexClient {
 		final InputStream input     = response.getEntity().getContent();
 		final String json           = IOUtils.toString(input);
 
-		// set timer for throttling
-		lastCall = System.currentTimeMillis();
-
 		// close input
 		input.close();
 		get.abort();
@@ -157,9 +154,6 @@ public class CexClient {
 		// close input
 		input.close();
 		post.abort();
-		
-		// set timer for throttling
-		lastCall = System.currentTimeMillis();
 
 		return gson.fromJson(json, resultType);
 	}
@@ -228,9 +222,12 @@ public class CexClient {
 		try {
 			
 			// do not make more than 1 request per second
-			while (System.currentTimeMillis() < lastCall + 1100) {
+			while (System.currentTimeMillis() < lastCall + 1010) {
 				Thread.sleep(100);
 			}
+
+			// set timer for throttling
+			lastCall = System.currentTimeMillis();
 			
 		} catch (Throwable t) { }
 	}

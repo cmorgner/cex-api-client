@@ -7,7 +7,7 @@ import org.apache.commons.lang.StringUtils;
  *
  * @author Christian Morgner
  */
-public class Order {
+public class Order implements Comparable<Order> {
 
 	@Expose
 	private long id = 0L;
@@ -55,5 +55,12 @@ public class Order {
 
 	public double getPending() {
 		return pending;
+	}
+
+	// ----- interface Comparable -----
+	public int compareTo(final Order o) {
+		
+		// default sort order is "price, descending"
+		return Double.valueOf(o.getPrice()).compareTo(Double.valueOf(getPrice()));
 	}
 }

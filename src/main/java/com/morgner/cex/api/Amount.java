@@ -7,7 +7,7 @@ import java.text.DecimalFormat;
  *
  * @author Christian Morgner
  */
-public class Amount {
+public class Amount implements Comparable<Amount> {
 	
 	@Expose
 	private double available = 0.0;
@@ -28,5 +28,12 @@ public class Amount {
 	
 	public double getOrders() {
 		return orders;
+	}
+
+	// ----- interface Comparable -----
+	public int compareTo(Amount o) {
+		
+		// default sort order is "available, descending"
+		return Double.valueOf(o.getAvailable()).compareTo(Double.valueOf(getAvailable()));
 	}
 }
