@@ -8,9 +8,9 @@ Christian Morgner (christian@morgner.de)
 1694QjV4mYJZfNX6pm6t2QtDT3srjHCtjE
 
 ## Usage
-### JAR
-Download the following JAR file and register it as a library in your own project:
-
+### JAR releases
+Download one of the following JAR file and register it as a library in your own project:
+- [0.1](https://github.com/cmorgner/cex-api-client/releases/tag/0.1)
 
 ### Clone & Build
 ```bash
