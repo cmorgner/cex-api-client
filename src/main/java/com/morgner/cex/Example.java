@@ -1,25 +1,3 @@
-# cex-api-client
-A simple API client for CEX.IO written in Java.
-
-## Author
-Christian Morgner (christian@morgner.de)
-
-### Donation address
-1694QjV4mYJZfNX6pm6t2QtDT3srjHCtjE
-
-## Usage
-### JAR
-Download the following JAR file and register it as a library in your own project:
-
-
-### Clone & Build
-```bash
-git clone https://github.com/cmorgner/cex-api-client.git
-mvn clean install
-```
-
-## Example code
-```java
 package com.morgner.cex;
 
 import com.morgner.cex.api.Amount;
@@ -67,4 +45,3 @@ public class Example {
 		}
 	}
 }
-```
