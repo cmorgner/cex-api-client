@@ -39,6 +39,10 @@ public class Example {
 			System.out.println("Placed order: " + order);
 			
 			
+			// cancel order
+			client.cancelOrder(order);
+			
+			
 			
 		} catch (IOException ioex) {
 			ioex.printStackTrace();

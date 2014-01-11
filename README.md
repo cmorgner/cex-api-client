@@ -17,8 +17,6 @@ mvn clean install
 
 ## Example code
 ```java
-package com.morgner.cex;
-
 import com.morgner.cex.api.Amount;
 import com.morgner.cex.api.Balance;
 import com.morgner.cex.api.Order;
@@ -58,6 +56,10 @@ public class Example {
 			System.out.println("Placed order: " + order);
 			
 			
+			// cancel order
+			client.cancelOrder(order);
+			
+			
 			
 		} catch (IOException ioex) {
 			ioex.printStackTrace();
@@ -69,5 +71,3 @@ public class Example {
 #### Donations
 If you like this API client and want to show your support, feel free to send your BTC donations to<br>
 1694QjV4mYJZfNX6pm6t2QtDT3srjHCtjE
-
-
