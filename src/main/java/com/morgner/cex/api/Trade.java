@@ -18,7 +18,7 @@ public class Trade implements Comparable<Trade> {
 	private double price = 0.0;
 	
 	@Expose
-	private long timestamp = 0L;
+	private long date = 0L;
 
 	public long getTid() {
 		return tid;
@@ -32,14 +32,14 @@ public class Trade implements Comparable<Trade> {
 		return price;
 	}
 
-	public long getTimestamp() {
-		return timestamp;
+	public long getDate() {
+		return date;
 	}
 
 	// ----- interface Comparable -----
 	public int compareTo(Trade o) {
 		
-		// default sort order is "price, descending"
-		return Double.valueOf(o.getPrice()).compareTo(Double.valueOf(getPrice()));
+		// default sort order is "date, descending"
+		return Long.valueOf(o.getDate()).compareTo(Long.valueOf(getDate()));
 	}
 }
