@@ -6,7 +6,8 @@ Christian Morgner<br>
 christian@morgner.de
 
 ##### JAR releases
-Download the JAR file at the following address and register it as a library in your own project:
+Download the JAR file of the latest release below and register it as a library in your own project:
+- [0.2](https://github.com/cmorgner/cex-api-client/releases/tag/0.2)
 - [0.1](https://github.com/cmorgner/cex-api-client/releases/tag/0.1)
 
 ###### Alternative: clone & build
