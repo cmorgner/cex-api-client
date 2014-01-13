@@ -1,4 +1,4 @@
-package com.morgner.cex.api;
+package de.morgner.cex.api;
 
 import com.google.gson.annotations.Expose;
 import java.text.DecimalFormat;

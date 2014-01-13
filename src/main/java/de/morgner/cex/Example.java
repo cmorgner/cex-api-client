@@ -1,10 +1,10 @@
-package com.morgner.cex;
+package de.morgner.cex;
 
-import com.morgner.cex.api.Amount;
-import com.morgner.cex.api.Balance;
-import com.morgner.cex.api.Order;
-import com.morgner.cex.api.OrderType;
-import com.morgner.cex.api.Pair;
+import de.morgner.cex.api.Amount;
+import de.morgner.cex.api.Balance;
+import de.morgner.cex.api.Order;
+import de.morgner.cex.api.OrderType;
+import de.morgner.cex.api.Pair;
 import java.io.IOException;
 
 /**

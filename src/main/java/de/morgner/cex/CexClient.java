@@ -1,17 +1,17 @@
-package com.morgner.cex;
+package de.morgner.cex;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.morgner.cex.api.Balance;
-import com.morgner.cex.api.Endpoint;
-import com.morgner.cex.api.Order;
-import com.morgner.cex.api.OrderBook;
-import com.morgner.cex.api.OrderType;
-import com.morgner.cex.api.Pair;
-import com.morgner.cex.api.Ticker;
-import com.morgner.cex.api.Trade;
+import de.morgner.cex.api.Balance;
+import de.morgner.cex.api.Endpoint;
+import de.morgner.cex.api.Order;
+import de.morgner.cex.api.OrderBook;
+import de.morgner.cex.api.OrderType;
+import de.morgner.cex.api.Pair;
+import de.morgner.cex.api.Ticker;
+import de.morgner.cex.api.Trade;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
