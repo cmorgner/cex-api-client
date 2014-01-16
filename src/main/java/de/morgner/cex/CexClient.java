@@ -111,8 +111,17 @@ public class CexClient {
 		// close input
 		input.close();
 		get.abort();
+
+		try {
 		
-		return gson.fromJson(json, resultType);
+			return gson.fromJson(json, resultType);
+			
+		} catch (Throwable t) {
+			
+			logger.log(Level.SEVERE, "Exception while parsing JSON string {0}: {1}", new Object[] { json, t.getMessage() } );
+		}
+		
+		return null;
 	}
 	
 	private synchronized <T> T doPost(final String url, final Type resultType) throws IOException {
@@ -155,7 +164,16 @@ public class CexClient {
 		input.close();
 		post.abort();
 
-		return gson.fromJson(json, resultType);
+		try {
+		
+			return gson.fromJson(json, resultType);
+			
+		} catch (Throwable t) {
+			
+			logger.log(Level.SEVERE, "Exception while parsing JSON string {0}: {1}", new Object[] { json, t.getMessage() } );
+		}
+		
+		return null;
 	}
 	
 	private String prepareCall(final Endpoint endpoint, final String... urlParts) {

@@ -1,12 +1,13 @@
 package de.morgner.cex.api;
 
 import com.google.gson.annotations.Expose;
+import java.io.Serializable;
 
 /**
  *
  * @author Christian Morgner
  */
-public class Trade implements Comparable<Trade> {
+public class Trade implements Comparable<Trade>, Serializable {
 
 	@Expose
 	private long tid = 0L;

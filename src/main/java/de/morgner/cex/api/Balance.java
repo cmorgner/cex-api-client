@@ -1,12 +1,13 @@
 package de.morgner.cex.api;
 
 import com.google.gson.annotations.Expose;
+import java.io.Serializable;
 
 /**
  *
  * @author Christian Morgner
  */
-public class Balance {
+public class Balance implements Serializable {
 	
 	@Expose
 	private String username = null;

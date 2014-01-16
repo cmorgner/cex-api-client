@@ -1,13 +1,14 @@
 package de.morgner.cex.api;
 
 import com.google.gson.annotations.Expose;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author Christian Morgner
  */
-public class OrderBook {
+public class OrderBook implements Serializable {
 
 	@Expose
 	private long timestamp = 0L;

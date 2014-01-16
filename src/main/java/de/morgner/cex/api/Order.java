@@ -1,13 +1,14 @@
 package de.morgner.cex.api;
 
 import com.google.gson.annotations.Expose;
+import java.io.Serializable;
 import org.apache.commons.lang.StringUtils;
 
 /**
  *
  * @author Christian Morgner
  */
-public class Order implements Comparable<Order> {
+public class Order implements Comparable<Order>, Serializable {
 
 	@Expose
 	private long id = 0L;

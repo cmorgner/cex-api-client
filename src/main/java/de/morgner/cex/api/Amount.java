@@ -1,13 +1,14 @@
 package de.morgner.cex.api;
 
 import com.google.gson.annotations.Expose;
+import java.io.Serializable;
 import java.text.DecimalFormat;
 
 /**
  *
  * @author Christian Morgner
  */
-public class Amount implements Comparable<Amount> {
+public class Amount implements Comparable<Amount>, Serializable {
 	
 	@Expose
 	private double available = 0.0;

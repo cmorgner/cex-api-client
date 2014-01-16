@@ -1,10 +1,12 @@
 package de.morgner.cex.api;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Christian Morgner
  */
-public enum Pair {
+public enum Pair implements Serializable {
 
 	GHS_BTC("GHS/BTC"),
 	GHS_NMC("GHS/NMC"),
