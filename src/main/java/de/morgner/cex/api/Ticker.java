@@ -61,4 +61,21 @@ public class Ticker implements Serializable {
 	public double getAsk() {
 		return ask;
 	}
+	
+	// ----- equals / hashCode contract -----
+	@Override
+	public int hashCode() {
+		return Long.valueOf(timestamp).hashCode();
+	}
+	
+	@Override
+	public boolean equals(final Object other) {
+		
+		if (other instanceof Trade) {
+			
+			return ((Trade)other).hashCode() == this.hashCode();
+		}
+		
+		return false;
+	}
 }

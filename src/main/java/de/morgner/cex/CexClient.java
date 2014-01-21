@@ -240,8 +240,8 @@ public class CexClient {
 		try {
 			
 			// do not make more than 1 request per second
-			while (System.currentTimeMillis() < lastCall + 1010) {
-				Thread.sleep(100);
+			while (System.currentTimeMillis() < (lastCall + 1001)) {
+				Thread.sleep(10);
 			}
 
 			// set timer for throttling
@@ -252,7 +252,7 @@ public class CexClient {
 	
 	private Map<String, Object> toMap(final String key, final Object value) {
 		
-		final Map<String, Object> map = new LinkedHashMap<String, Object>();
+		final Map<String, Object> map = new LinkedHashMap<>();
 		
 		map.put(key, value);
 		
@@ -261,7 +261,7 @@ public class CexClient {
 	
 	private Map<String, Object> toMap(final String key1, final Object value1, final String key2, final Object value2, final String key3, final Object value3) {
 		
-		final Map<String, Object> map = new LinkedHashMap<String, Object>();
+		final Map<String, Object> map = new LinkedHashMap<>();
 		
 		map.put(key1, value1);
 		map.put(key2, value2);

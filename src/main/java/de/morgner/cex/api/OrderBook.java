@@ -35,4 +35,21 @@ public class OrderBook implements Serializable {
 	public List<List<Double>> getAsks() {
 		return asks;
 	}
+	
+	// ----- equals / hashCode contract -----
+	@Override
+	public int hashCode() {
+		return Long.valueOf(timestamp).hashCode();
+	}
+	
+	@Override
+	public boolean equals(final Object other) {
+		
+		if (other instanceof OrderBook) {
+			
+			return ((OrderBook)other).hashCode() == this.hashCode();
+		}
+		
+		return false;
+	}
 }

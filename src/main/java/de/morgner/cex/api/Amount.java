@@ -30,6 +30,23 @@ public class Amount implements Comparable<Amount>, Serializable {
 	public double getOrders() {
 		return orders;
 	}
+	
+	// ----- equals / hashCode contract -----
+	@Override
+	public int hashCode() {
+		return Double.valueOf(available).hashCode() ^ Double.valueOf(orders).hashCode();
+	}
+	
+	@Override
+	public boolean equals(final Object other) {
+		
+		if (other instanceof Amount) {
+			
+			return ((Amount)other).hashCode() == this.hashCode();
+		}
+		
+		return false;
+	}
 
 	// ----- interface Comparable -----
 	public int compareTo(Amount o) {

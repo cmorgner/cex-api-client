@@ -36,6 +36,23 @@ public class Trade implements Comparable<Trade>, Serializable {
 	public long getDate() {
 		return date;
 	}
+	
+	// ----- equals / hashCode contract -----
+	@Override
+	public int hashCode() {
+		return Long.valueOf(tid).hashCode();
+	}
+	
+	@Override
+	public boolean equals(final Object other) {
+		
+		if (other instanceof Trade) {
+			
+			return ((Trade)other).hashCode() == this.hashCode();
+		}
+		
+		return false;
+	}
 
 	// ----- interface Comparable -----
 	public int compareTo(Trade o) {

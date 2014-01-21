@@ -57,6 +57,23 @@ public class Order implements Comparable<Order>, Serializable {
 	public double getPending() {
 		return pending;
 	}
+	
+	// ----- equals / hashCode contract -----
+	@Override
+	public int hashCode() {
+		return type.hashCode() ^ Double.valueOf(price).hashCode() ^ Double.valueOf(amount).hashCode() ^ Double.valueOf(pending).hashCode();
+	}
+	
+	@Override
+	public boolean equals(final Object other) {
+		
+		if (other instanceof Order) {
+			
+			return ((Order)other).hashCode() == this.hashCode();
+		}
+		
+		return false;
+	}
 
 	// ----- interface Comparable -----
 	public int compareTo(final Order o) {
